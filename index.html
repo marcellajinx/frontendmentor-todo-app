@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <title>TO DO APP</title>
+</head>
+<body>
+    <div class="container">
+        <div class="todo-container">
+            <h1>TODO <span id="moonsun"><img src="images/icon-moon.svg" alt="moonsun"></span></h1>
+            <div class="todo-new">
+                <form action="#">
+                    <div class="form-wrapper">
+                        <button type="submit" class="circle" id="input-btn"><img src="images/icon-check.svg" alt="check"></button>
+                        <input type="text" placeholder="Create a new todo.." id="new-todo" autocomplete="off">    
+                    </div>
+                </form>
+            </div>
+            <div class="todo-list">
+                <div class="test">
+                    
+                </div>
+                <ul id="lists">
+                    <!-- <div class="list">
+                        <div class="circle checked">
+                            <img src="images/icon-check.svg" alt="check-img">
+                        </div>
+                        <li class="list-item">Jog around the park 3x <span class="cross"><img src="images/icon-cross.svg" alt="cross-img"></span></li>
+                        <div class="cross">
+                        </div>
+                    </div> -->
+                </ul>
+                <ul id="lists-rev">
+                    <li>
+                        <div class="item-left todo-info"><span id="number-of-todo">0</span>items left</div>
+                        <div class="condition todo-info">
+                            <span class="all-list">All</span>
+                            <span class="active-list">Active</span>
+                            <span class="completed-list">Completed</span>
+                        </div>
+                        <div class="clear-completed todo-info">Clear Completed</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="rule">Drag and drop to reorder list</p>
+    </div>
+
+    <script>
+        const reorderTarget = document.querySelector("#lists");
+        new Sortable(reorderTarget, {
+            animation: 350
+        });
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>

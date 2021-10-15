@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(0, 0%, 98%) url(images/bg-desktop-light.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    color: hsl(236, 9%, 61%);
+}
+
+form input .body{
+    background-color: hsl(235, 24%, 19%);
+}
+
+.dark {
+    background: hsl(235, 21%, 11%) url(images/bg-desktop-dark.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+form input::placeholder {
+    font-family: 'Josefin Sans', sans-serif;
+    color: hsl(236, 9%, 61%);
+}
+
+form input {
+    padding: 1em 4.5em;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: hsl(235, 19%, 35%);
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid hsl(233, 11%, 84%);
+    opacity: 80%;
+    height: 1.3rem;
+    width: 1.3rem;
+    position: absolute;
+    margin: 0.54em 1em;
+    cursor: pointer;
+}
+
+.circle img {
+    width: 50%;
+    position: absolute;
+    top: 0.35rem;
+    left: 0.33rem;
+    visibility: hidden;
+}
+
+.checked {
+    border: none;
+    opacity: 100%;
+    background-image: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.checked img {
+    visibility: visible;
+}
+
+.list {
+    position: relative;
+}
+
+.list-item:hover{
+    cursor: pointer;
+}
+
+.list:hover .cross img { visibility: visible; cursor: pointer;}
+
+.cross {
+    position: absolute;
+    top: 0.4rem;
+    right: 1rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    visibility: hidden;
+}
+
+.cross img {
+    height: 0.7rem;
+    width: 0.7rem;
+}
+
+.todo-container {
+    width: 30%;
+    margin: 5rem auto;
+}
+
+.todo-container h1 {
+    letter-spacing: 0.6rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 98%);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+#moonsun {
+   position: absolute;
+   right: 0;
+}
+
+#moonsun img {
+    cursor: pointer;
+    height: 5vh;
+}
+
+.todo-new {
+    margin-bottom: 6vh;
+}
+
+.todo-list {
+    border-radius: 4px;
+    background-color: white;
+}
+
+#lists {
+    overflow-y: scroll;
+    max-height: 50vh;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#lists-rev li {
+    font-size: 12px;
+    font-weight: 700;
+    color: hsl(233, 11%, 84%);
+    border: none;
+    margin: 0;
+    list-style-position: inside;
+    text-align: center;
+    display: grid;
+    padding: 1em 0;
+    grid-template-columns: 0.7fr 1.3fr 0.9fr;
+}
+
+#lists-rev li span {
+    padding: 0 0.3em;
+}
+
+.all-list {
+    color: hsl(220, 98%, 61%);
+}
+
+.all-list:hover {
+    cursor: pointer;
+}
+
+.active-list:hover, .completed-list:hover, .clear-completed:hover {
+    color: hsl(235, 19%, 35%);
+    cursor: pointer;
+}
+
+li {
+    padding: 1em 4.5em;
+    color: hsl(235, 19%, 35%);
+    list-style: none;
+    border-bottom: 1px solid hsl(233, 11%, 84%);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+p.rule {
+    position: absolute;
+    font-size: 12px;
+    left: 45%;
+}
+
+.todo-info {
+    display: inline;
+}
